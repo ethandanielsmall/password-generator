@@ -1,20 +1,19 @@
 // Assignment code here
-let characterLength = window.prompt("How many characters long would you like your password?");
 let characterLower = window.confirm ("Would you like lower case letters?");
 let characterUpper = window.confirm ("Would you like upper case letters?");
 let characterNumbers = window.confirm ("Would you like numbers?");
 let characterSpecial = window.confirm ("Would you like special characters?");
-
+let characterLength = window.prompt("How many characters long would you like your password?");
 
 function generatePassword() {
   var length = characterLength;
       lower = "aghijklwbcmnopqrstuvdefxyz";
-      upper = "ASTHIJFGNOBCDPQUVWRKLMXEYZ";
+      upper = "ASTHIJFGNOZBCDPQUVWRKLMXEY";
       numbers = "1567089234";
       special = "!@#$%^&*";
       retVal = "";
   for (var i = 0, n = characterLength; i < length; ++i) {
-      retVal += lower.charAt(Math.floor(Math.random() * n));
+      retVal += upper.charAt(Math.random() * n);
   };
   return retVal;
 };
@@ -51,6 +50,7 @@ generateBtn.addEventListener("click", writePassword);
 // THEN I choose a length of at least 8 characters and no more than
 // 128 characters
 
+// ------------------------------------------------------------------------
 
 // WHEN asked for character types to include in the password
 // THEN I confirm whether or not to include lowercase, uppercase, numeric,
