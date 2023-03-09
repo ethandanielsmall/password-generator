@@ -1,35 +1,26 @@
 // Assignment code here
 
-import java.util.Scanner;
-
-class Main {
-  public static vid main (String[] args) [
-
-    Scanner in = new Scanner(System.in);
-
-    // ask user password criteria
-    System.out.print("How many random passwords do you want generated?");
-    int total = in.nextInt();
-
-
-  ]
+public String generateCommonLangPassword() {
+  String upperCaseLetters = RandomStringUtils.random(2, 65, 90, true, true);
+  String lowerCaseLetters = RandomStringUtils.random(2, 97, 122, true, true);
+  String numbers = RandomStringUtils.randomNumeric(2);
+  String specialChar = RandomStringUtils.random(2, 33, 47, false, false);
+  String totalChars = RandomStringUtils.randomAlphanumeric(2);
+  String combinedChars = upperCaseLetters.concat(lowerCaseLetters)
+    .concat(numbers)
+    .concat(specialChar)
+    .concat(totalChars);
+  List<Character> pwdChars = combinedChars.chars()
+    .mapToObj(c -> (char) c)
+    .collect(Collectors.toList());
+  Collections.shuffle(pwdChars);
+  String password = pwdChars.stream()
+    .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
+    .toString();
+  return password;
 }
 
-// ask the user to enter total numer of random passwords they want generated
-
-// ask he user how many charas long tey want the passwords
-
-// create a function that generates a random chara, which can be a
-// number, lower case, or uppercase (and syumbols?)
-
-// make the random password by looping ???
-
-// store each random password you generate in an array
-
-// create a function to print out your array of passwords
-
-
-// -----------------------------------------
+// ------------------
 
 // // Get references to the #generate element
 // var generateBtn = document.querySelector("#generate");
