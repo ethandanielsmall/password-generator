@@ -1,16 +1,16 @@
 // Assignment code here
-const btn = document.querySelector('#btn');
-
 function generatePassword() {
-
-  var length = 8,
-      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+  var length = 8;
+      lower_case = "abcdefghijklmnopqrstuvwxyz";
+      upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      numbers = "0123456789";
+      special = "!@#$%^&*";
       retVal = "";
-  for (var i = 0, n = charset.length; i < length; ++i) {
-      retVal += charset.charAt(Math.floor(Math.random() * n));
-  }
+  for (var i = 0, n = 8; i < length; ++i) {
+      retVal += lower_case.charAt(Math.floor(Math.random() * n));
+  };
   return retVal;
-}
+};
 
 // ------------------------------------------------------------------------
 
