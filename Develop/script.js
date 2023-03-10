@@ -1,6 +1,5 @@
 // Assignment code here
 
-
 function generatePassword() {
 
   let characterLower = window.confirm ("Would you like lower case letters?");
@@ -24,6 +23,9 @@ retVal = "";
   };
   return retVal.substring(0, length);
 };
+
+// IDEA: SAVE ALL OF THE THINGS AND THEN PUT 'IF TRUE LOWER CASE' ????
+// AND EVERY IF WOULD BE SOLO ?? or google while statements lol
 
 // ------------------------------------------------------------------------
 
