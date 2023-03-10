@@ -2,24 +2,26 @@
 
 function generatePassword() {
 
+
+
   let characterLower = window.confirm ("Would you like lower case letters?");
   let characterUpper = window.confirm ("Would you like upper case letters?");
   let characterNumbers = window.confirm ("Would you like numbers?");
   let characterSpecial = window.confirm ("Would you like special characters?");
-  let characterLength = window.prompt ("How many characters long would you like your password?");
-
-  var length = characterLength;
+  let characters = window.prompt ("How many characters long would you like your password?");
+  //TODO:Check for input to be correct values 
+  var length = characters;
   lower = "aghijklwbcmnopqrstuvdefxyz";
   upper = "ASTHIJFGNOZBCDPQUVWRKLMXEY";
   numbers = "1567089234";
   special = "!@#$%&*";
   retVal = "";
 
-  for (var i = 0, n = characterLength; i < length; ++i) {
-    retVal += lower.charAt(Math.random() * n)
-    retVal += upper.charAt(Math.random() * n)
-    retVal += numbers.charAt(Math.random() * n)
-    retVal += special.charAt(Math.random() * n)
+  for (var i = 0; i < length; i++) {
+    if (characterLower === true) {retVal += lower.charAt(Math.random())}
+    if (characterUpper === true) {retVal += upper.charAt(Math.random())}
+    if (characterNumbers === true) {retVal += numbers.charAt(Math.random())}
+    if (characterSpecial === true) {retVal += special.charAt(Math.random())}
 };
 
   // const passwordRegularExpressionParamaters = ["characterLower", "characterUpper"]
