@@ -15,6 +15,24 @@ function generatePassword() {
   special = "!@#$%&*";
   retVal = "";
 
+  for (var i = 0, n = characterLength; i < length; ++i) {
+    retVal += lower.charAt(Math.random() * n)
+    retVal += upper.charAt(Math.random() * n)
+    retVal += numbers.charAt(Math.random() * n)
+    retVal += special.charAt(Math.random() * n)
+};
+
+  // const passwordRegularExpressionParamaters = ["characterLower", "characterUpper"]
+
+  // array deoration if the first is clicked/true, then lower case is gonna
+  // equal the string, let uppercase string, number string, special string,
+  // 
+
+  // for (let i = 0; i < passwordRegularExpressionParamaters.length; i++) {
+  //   const element = passwordRegularExpressionParamaters[i];
+  //   generatedpassword += array[i] + lower
+  // }
+
   // ------------------------------------------------------------------------
 
   // for (var i = 0, n = characterLength; i < length; ++i) {
@@ -26,27 +44,27 @@ function generatePassword() {
 
   // ------------------------------------------------------------------------
 
-  for (var i = 0, n = characterLength; i < length; ++i) {
-  do {
-  retVal += lower.charAt(Math.random() * n)
-  }
-  while (characterLower = true);
+  // for (var i = 0, n = characterLength; i < length; ++i) {
+  // do {
+  // retVal += lower.charAt(Math.random() * n)
+  // }
+  // while (characterLower = true);
 
-  do {
-  retVal += upper.charAt(Math.random() * n)
-  }
-  while (characterUpper = true);
+  // do {
+  // retVal += upper.charAt(Math.random() * n)
+  // }
+  // while (characterUpper = true);
 
-  do {
-  retVal += numbers.charAt(Math.random() * n)
-  }
-  while (characterNumbers = true);
+  // do {
+  // retVal += numbers.charAt(Math.random() * n)
+  // }
+  // while (characterNumbers = true);
 
-  do {
-  retVal += special.charAt(Math.random() * n)
-  }
-  while (characterSpecial = true);
-  };
+  // do {
+  // retVal += special.charAt(Math.random() * n)
+  // }
+  // while (characterSpecial = true);
+  // };
 
 
 // ------------------------------------------------------------------------
