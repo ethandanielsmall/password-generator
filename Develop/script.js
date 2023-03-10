@@ -1,4 +1,7 @@
 // Assignment code here
+
+
+
 let characterLower = window.confirm ("Would you like lower case letters?");
 let characterUpper = window.confirm ("Would you like upper case letters?");
 let characterNumbers = window.confirm ("Would you like numbers?");
@@ -12,10 +15,14 @@ function generatePassword() {
       numbers = "1567089234";
       special = "!@#$%^&*";
       retVal = "";
+
   for (var i = 0, n = characterLength; i < length; ++i) {
-      retVal += upper.charAt(Math.random() * n);
+      retVal += lower.charAt(Math.random() * n)
+      retVal += upper.charAt(Math.random() * n)
+      retVal += numbers.charAt(Math.random() * n)
+      retVal += special.charAt(Math.random() * n)
   };
-  return retVal;
+  return retVal.substring(0, length);
 };
 
 // ------------------------------------------------------------------------
