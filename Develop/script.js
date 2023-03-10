@@ -1,7 +1,5 @@
 // Assignment code here
 
-
-
 let characterLower = window.confirm ("Would you like lower case letters?");
 let characterUpper = window.confirm ("Would you like upper case letters?");
 let characterNumbers = window.confirm ("Would you like numbers?");
