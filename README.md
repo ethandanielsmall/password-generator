@@ -10,13 +10,14 @@ This password generator website is designed to generate a customizable password.
 
 ## Link to deployed application
 
-Deployed application: (https://ethandanielsmall.github.io/horiseon-html-refactor/)
+Deployed application: (https://ethandanielsmall.github.io/password-generator/)
 
 ## Source code
 
-Source code: (https://github.com/coding-boot-camp/urban-octo-telegram)
+Source code: (https://github.com/coding-boot-camp/friendly-parakeet)
 
-## credits
+## Credits
+
 https://www.tutorialspoint.com/Generating-password-in-Java
 
 juni learning: https://www.youtube.com/watch?v=3Vg2J1CWs2Q&ab_channel=JuniLearning
