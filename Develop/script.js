@@ -1,3 +1,5 @@
+// Assignment code here
+
 function generatePassword() {
 
   let characterLower = window.confirm ("Would you like lower case letters?");
